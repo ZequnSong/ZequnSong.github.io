@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zequn&#39;s Blog</title>
+  
+  <subtitle>Stay hungry Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zequnsong.github.io/"/>
+  <updated>2019-04-28T06:12:16.317Z</updated>
+  <id>https://zequnsong.github.io/</id>
+  
+  <author>
+    <name>Zequn Song</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction to AI</title>
+    <link href="https://zequnsong.github.io/2019/04/28/Introduction-to-AI/"/>
+    <id>https://zequnsong.github.io/2019/04/28/Introduction-to-AI/</id>
+    <published>2019-04-28T06:09:22.000Z</published>
+    <updated>2019-04-28T06:12:16.317Z</updated>
+    
+    <content type="html"><![CDATA[<hr><img src="/2019/04/28/Introduction-to-AI/cover.png" width="800" height="200" title="What is AI ?"><p>What is AI? </p><p>Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility.</p><h4 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h4><p>An agent is an entity that perceives and acts. A rational agent selects actions that maximize its expected utility. Characteristics of the percepts, environment, and action space dictate techniques for selecting rational actions.</p><p>An agent needs sensors to sense the information of the environment, and also needs actuators to take actions based on perceived information.</p><p><img src="AgentInAI.jpg" width="300" height="120" alt="How agent works"></p><h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>This and following articles are about general AI techniques for a variety of problem types and learning to recognize when and how a new problem can be solved with an existing technique.</p><p>The following articles will cover AI in two parts:</p><ul><li>Part I: Making Decisions<ul><li>Uninformed and Informed Search</li><li>Constraint Satisfaction Problem</li><li>Adversarial and Uncertain Search</li></ul></li></ul><ul><li>Part II: Reasoning under Uncertainty<ul><li>Markov Decision Problem</li><li>Reinforcement Learning</li><li>Markov Model &amp; Hidden Markov Model</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;img src=&quot;/2019/04/28/Introduction-to-AI/cover.png&quot; width=&quot;800&quot; height=&quot;200&quot; title=&quot;What is AI ?&quot;&gt;
+&lt;p&gt;What is AI? &lt;/p&gt;
+&lt;p&gt;Nowadays, AI 
+      
+    
+    </summary>
+    
+      <category term="Artificial Intelligence" scheme="https://zequnsong.github.io/categories/Artificial-Intelligence/"/>
+    
+      <category term="Introduction to AI" scheme="https://zequnsong.github.io/categories/Artificial-Intelligence/Introduction-to-AI/"/>
+    
+    
+      <category term="AI" scheme="https://zequnsong.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TagPlugins Test</title>
+    <link href="https://zequnsong.github.io/2019/04/28/TagPlugins-Test/"/>
+    <id>https://zequnsong.github.io/2019/04/28/TagPlugins-Test/</id>
+    <published>2019-04-28T06:08:58.000Z</published>
+    <updated>2019-04-28T06:11:10.175Z</updated>
+    
+    <content type="html"><![CDATA[<p>In Hexo, Tag Plugins are used for inserting specific content into the article. Let me show you how it works here.</p><h2 id="Quote"><a href="#Quote" class="headerlink" title="Quote"></a>Quote</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><p>Example: </p><blockquote><p>Use all the parameters</p><footer><strong>Zequn Song, A book of Genius</strong><cite><a href="https://zequnsong.github.io">Zequn's blog</a></cite></footer></blockquote><blockquote><p>Don’t worry, Tweet happy. (Quote from twitter)</p><footer><strong>@Twitter</strong><cite><a href="https://twitter.com/Twitter/status/1119338115989213185" target="_blank" rel="noopener">twitter.com/Twitter/status/1119338115989213185</a></cite></footer></blockquote><h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [lang:language] [description] [source_link for description]%&#125;</span><br><span class="line">code</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><p>Example:</p><figure class="highlight java"><figcaption><span>test-java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Test for code block"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&#125;</span><br></pre></td></tr></table></figure><iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/Zequn/0v7j29ep/1/embedded/js,html,css,result/dark" frameborder="0" allowfullscreen></iframe><h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>Embed with js:</p><script src="https://gist.github.com/ZequnSong/08f61c6d1c146014a297eadf486bacef.js" file="index.html"></script><p>Embed with tag plugins:</p><script src="//gist.github.com/08f61c6d1c146014a297eadf486bacef.js?file=index.html"></script><p>Gist Preview on bl.ocks: <a href="https://bl.ocks.org/ZequnSong/08f61c6d1c146014a297eadf486bacef" target="_blank" rel="noopener">https://bl.ocks.org/ZequnSong/08f61c6d1c146014a297eadf486bacef</a></p><h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>can be used to embed web, video, music</p><iframe src="http://v.youku.com/v_show/id_XOTIxNDYzODU2.html" width="930" height="542" frameborder="0" allowfullscreen></iframe><h2 id="image"><a href="#image" class="headerlink" title="image"></a>image</h2><img src="/2019/04/28/TagPlugins-Test/dfeb310fcf5b3751849d6c6278e05299.jpg" width="920" height="613" title="example picture"><p><img src="1-1PG6122T4.jpg" alt="test markdown"></p><h2 id="youtube"><a href="#youtube" class="headerlink" title="youtube"></a>youtube</h2><div class="video-container"><iframe src="//www.youtube.com/embed/whrb7UfKBeU" frameborder="0" allowfullscreen></iframe></div><h2 id="vimeo"><a href="#vimeo" class="headerlink" title="vimeo"></a>vimeo</h2><div class="video-container"><iframe src="//player.vimeo.com/video/330553859" frameborder="0" allowfullscreen></iframe></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;In Hexo, Tag Plugins are used for inserting specific content into the article. Let me show you how it works here.&lt;/p&gt;
+&lt;h2 id=&quot;Quote&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://zequnsong.github.io/categories/Hexo/"/>
+    
+      <category term="Tag Plugins" scheme="https://zequnsong.github.io/categories/Hexo/Tag-Plugins/"/>
+    
+    
+  </entry>
+  
+</feed>
