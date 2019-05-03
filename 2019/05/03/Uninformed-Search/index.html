@@ -7,26 +7,26 @@
     
 
     
-    <title>Introduction to AI | Zequn&#39;s Blog</title>
+    <title>Uninformed Search | Zequn&#39;s Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="AI">
     
-    <meta name="description" content="What is AI?  Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility. AgentAn agent is an entity that perceives and acts. A">
+    <meta name="description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
 <meta name="keywords" content="AI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Introduction to AI">
-<meta property="og:url" content="https://zequnsong.github.io/2019/04/28/Introduction-to-AI/index.html">
+<meta property="og:title" content="Uninformed Search">
+<meta property="og:url" content="https://zequnsong.github.io/2019/05/03/Uninformed-Search/index.html">
 <meta property="og:site_name" content="Zequn&#39;s Blog">
-<meta property="og:description" content="What is AI?  Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility. AgentAn agent is an entity that perceives and acts. A">
+<meta property="og:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zequnsong.github.io/2019/04/28/Introduction-to-AI/cover.png">
-<meta property="og:updated_time" content="2019-04-28T06:12:16.317Z">
+<meta property="og:image" content="https://zequnsong.github.io/2019/05/03/Uninformed-Search/search.jpg">
+<meta property="og:updated_time" content="2019-05-03T08:34:04.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Introduction to AI">
-<meta name="twitter:description" content="What is AI?  Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility. AgentAn agent is an entity that perceives and acts. A">
-<meta name="twitter:image" content="https://zequnsong.github.io/2019/04/28/Introduction-to-AI/cover.png">
+<meta name="twitter:title" content="Uninformed Search">
+<meta name="twitter:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
+<meta name="twitter:image" content="https://zequnsong.github.io/2019/05/03/Uninformed-Search/search.jpg">
     
 
     
@@ -141,19 +141,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a>
+    <a class="page-title-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Introduction-to-AI" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Uninformed-Search" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Introduction to AI
+        Uninformed Search
         </h1>
     
 
@@ -163,8 +163,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/28/Introduction-to-AI/" class="article-date">
-            <time datetime="2019-04-28T06:09:22.000Z" itemprop="datePublished">2019-04-28</time>
+        <a href="/2019/05/03/Uninformed-Search/" class="article-date">
+            <time datetime="2019-05-03T06:05:11.000Z" itemprop="datePublished">2019-05-03</time>
         </a>
     </div>
 
@@ -176,35 +176,72 @@
         <a class="tag-link" href="/tags/AI/">AI</a>
     </div>
 
-                Views:<span id="/2019/04/28/Introduction-to-AI/" class="leancloud_visitors" data-flag-title="Introduction to AI"></span>
+                Views:<span id="/2019/05/03/Uninformed-Search/" class="leancloud_visitors" data-flag-title="Uninformed Search"></span>
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
             <hr>
-<img src="/2019/04/28/Introduction-to-AI/cover.png" width="800" height="200" title="What is AI ?">
-<p>What is AI? </p>
-<p>Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility.</p>
-<h4 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h4><p>An agent is an entity that perceives and acts. A rational agent selects actions that maximize its expected utility. Characteristics of the percepts, environment, and action space dictate techniques for selecting rational actions.</p>
-<p>An agent needs sensors to sense the information of the environment, and also needs actuators to take actions based on perceived information.</p>
-<p><img src="AgentInAI.jpg" width="300" height="120" alt="How agent works"></p>
-<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>This and following articles are about general AI techniques for a variety of problem types and learning to recognize when and how a new problem can be solved with an existing technique.</p>
-<p>The following articles will cover AI in two parts:</p>
+<p>Uninformed Search means agent doesn’t know how close a state is to the goal state.<br>Strategies that know whether one non-goal state is “more promising” than another are called <strong>Informed Search</strong> or <strong>Heuristic Search</strong> strategies; they are covered in next article.</p>
+<img src="/2019/05/03/Uninformed-Search/search.jpg" title="BFS">
+<h4 id="Breadth-First-Search"><a href="#Breadth-First-Search" class="headerlink" title="Breadth-First Search"></a>Breadth-First Search</h4><p>The root node is expanded first, then all the successors of the root node are expanded next, then their successors, and so on. In general, all the nodes are expanded at a given depth in the search tree before any nodes at the next level are expanded.</p>
+<p><img src="BFS.jpg" alt="BFS on a simple binary tree"></p>
+<p>Frontier: a FIFO queue</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//-----------------------BREADTH-FIRST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BREADTH</span>-<span class="title">FIRST</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  node with STATE = problem.INITIAL-STATE, PATH-COST = <span class="number">0</span></span><br><span class="line">  <span class="keyword">if</span> problem.GOAL-TEST(node.STATE) then <span class="keyword">return</span> SOLUTION(node)</span><br><span class="line">  frontier = a FIFO queue with node as the only element</span><br><span class="line">  explored = an empty set</span><br><span class="line">  loop do</span><br><span class="line">    <span class="keyword">if</span> EMPTY?(frontier ) then <span class="keyword">return</span> failure</span><br><span class="line">    node = POP(frontier ) /* chooses the shallowest node in frontier */</span><br><span class="line">    add node.STATE to explored</span><br><span class="line">    <span class="keyword">for</span> each action in problem.ACTIONS(node.STATE) do</span><br><span class="line">      child = CHILD-NODE(problem, node, action)</span><br><span class="line">      <span class="keyword">if</span> child.STATE is not in explored or frontier then</span><br><span class="line">        //goal test is applied to each node when it is generated rather than when it is selected for expansion</span><br><span class="line">        <span class="keyword">if</span> problem.GOAL-TEST(child.STATE) then <span class="keyword">return</span> SOLUTION(child)</span><br><span class="line">        frontier = INSERT(child,frontier )</span><br></pre></td></tr></table></figure>
+<p><strong>Evaluation</strong></p>
 <ul>
-<li>Part I: Making Decisions<ul>
-<li>Uninformed and Informed Search</li>
-<li>Constraint Satisfaction Problem</li>
-<li>Adversarial and Uncertain Search</li>
+<li><strong>Complete:</strong> if the shallowest goal node is at some finite depth d, breadth-first search will eventually find it after generating all shallower nodes (provided the branching factor b is finite).</li>
+<li><strong>Not optimal:</strong> only optimal when the path cost is a non-decreasing function of the depth of the node. The most common such scenario is that all actions have the same cost.</li>
+<li><strong>Time complexity:</strong><br>Imagine branching factor is $b$ (each state has $b$ successors).<br>The root generates $b$ nodes at the first level.<br>Each of these generates $b$ more nodes, for a total of $b^2$ at the second level.<br>Each of these generates $b$ more nodes, yielding $b^3$ nodes at the third level, and so on.<br>Suppose that the solution is at depth $s$.<br>$$b + b^2 + b^3 + ··· + b^s = O(b^s)$$</li>
 </ul>
-</li>
-</ul>
+<img src="/2019/05/03/Uninformed-Search/BFS2.jpg" title="BFS">
+<center><font color="#afaaaa" size="4">BFS</font></center>
+
 <ul>
-<li>Part II: Reasoning under Uncertainty<ul>
-<li>Markov Decision Problem</li>
-<li>Reinforcement Learning</li>
-<li>Markov Model &amp; Hidden Markov Model</li>
+<li><strong>Space complexity:</strong><br>There will be $O(b^{s−1})$ nodes in the explored set and $O(b^s)$ nodes in the frontier.</li>
 </ul>
-</li>
+<h4 id="Depth-First-Search"><a href="#Depth-First-Search" class="headerlink" title="Depth-First Search"></a>Depth-First Search</h4><p>Always expands the deepest node in the current frontier of the search tree. The search proceeds immediately to the deepest level of the search tree, where the nodes have no successors. As those nodes are expanded, they are dropped from the frontier, so then the search “backs up” to the next deepest node that still has unexplored successors</p>
+<p><img src="DFS.jpg" alt="DFS. The unexplored region is shown in light gray. Explored nodes with no descendants in the frontier are removed from memory. M is the only goal node."></p>
+<p>Frontier: a LIFO queue</p>
+<p><strong>Evaluation</strong></p>
+<ul>
+<li><strong>Complete:</strong> in finity state space.</li>
+<li><strong>Not optimal:</strong> return the leftmost solution.</li>
+<li><strong>Time complexity:</strong><br>Imagine branching factor is $b$.<br>Suppose that maximum depth is $m$.<br>Therefore, time complexity is $O(b^m)$, bigger than BFS.</li>
+</ul>
+<img src="/2019/05/03/Uninformed-Search/DFS2.jpg" title="DFS">
+<center><font color="#afaaaa" size="4">DFS</font></center>
+
+<ul>
+<li><strong>Space complexity:</strong><br>Only needs to store a single path from the root to a leaf node, along with the remaining unexpanded sibling nodes for each node on the path. Once a node has been expanded, it can be removed from memory as soon as all its descendants have been fully explored.<br>Therefore, DFS requires storage of only $O(bm)$ nodes. (if not use explored set)</li>
+</ul>
+<h4 id="Depth-Limited-Search"><a href="#Depth-Limited-Search" class="headerlink" title="Depth Limited Search"></a>Depth Limited Search</h4><p>The embarrassing failure of DFS in infinite state spaces can be alleviated by supplying DFS with a predetermined depth limit $l$. That is, nodes at depth $l$ are treated as if they have no successors.<br>DFS can be viewed as a special case of depth-limited search with $l=d$.</p>
+<p><strong>Evaluation</strong></p>
+<ul>
+<li><strong>Not Complete:</strong> $l$ can be smaller than $s$.</li>
+<li><strong>Not optimal:</strong> $l$ can be bigger than $d$.</li>
+<li><strong>Time complexity:</strong> $O(b^l)$</li>
+<li><strong>Space complexity:</strong> $O(bl)$</li>
+</ul>
+<h4 id="Iterative-Deepening-Search"><a href="#Iterative-Deepening-Search" class="headerlink" title="Iterative Deepening Search"></a>Iterative Deepening Search</h4><p>Get DFS’s space advantage with BFS’s time advantage. Repeat the DFS by gradually increasing the depth limit, until a goal is found.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//-----------------------BREADTH-FIRST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ITERATIVE</span>-<span class="title">DEEPENING</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  <span class="keyword">for</span> depth = <span class="number">0</span> to ∞ do</span><br><span class="line">    result ← DEPTH-LIMITED-SEARCH(problem, depth)</span><br><span class="line">    <span class="keyword">if</span> result != cutoff then <span class="keyword">return</span> result </span><br><span class="line">    //the cutoff value indicates no solution within the depth limit.</span><br></pre></td></tr></table></figure>
+<p><img src="IDS.jpg" alt="Four iterations of IDS on a binary tree."></p>
+<p><strong>Evaluation</strong></p>
+<ul>
+<li><strong>Complete:</strong> same as BFS</li>
+<li><strong>Not optimal:</strong> same as BFS</li>
+<li><strong>Time complexity:</strong> $O(b^s)$<br>asymptotically the same as BFS<br>There is some extra cost for generating the upper levels multiple times, but it is not large.<br>For example, if $b = 10$ and $s = 5$, the numbers are<br>$N(IDS) = 50 + 400 + 3, 000 + 20, 000 + 100, 000 = 123, 450$<br>$N(BFS) = 10 + 100 + 1, 000 + 10, 000 + 100, 000 = 111, 110$</li>
+<li><strong>Space complexity:</strong> $O(bs)$</li>
+</ul>
+<h4 id="Uniform-Cost-Search"><a href="#Uniform-Cost-Search" class="headerlink" title="Uniform Cost Search"></a>Uniform Cost Search</h4><p>When all step costs are equal, breadth-first search is optimal because it always expands the shallowest unexpanded node.<br>By a simple extension, we can find an algorithm that is optimal with any step-cost function.<br>Instead of expanding the shallowest node, UCS expands the node n with the lowest g(n) which is path cost.<br>This is done by storing the frontier as a priority queue ordered by g.</p>
+<p>Frontier: a priority queue (priority: cumulative cost g(n))</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//----------------------- UNIFORM-COST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UNIFORM</span>-<span class="title">COST</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  node ←a node with STATE = problem.INITIAL-STATE, PATH-COST = <span class="number">0</span></span><br><span class="line">  frontier ← a priority queue ordered by PATH-COST, with node as the only element</span><br><span class="line">  explored ← an empty set</span><br><span class="line">  loop do</span><br><span class="line">    <span class="keyword">if</span> EMPTY?(frontier ) then <span class="keyword">return</span> failure</span><br><span class="line">    node ← POP(frontier ) /* chooses the lowest-cost node in frontier */</span><br><span class="line">    <span class="keyword">if</span> problem.GOAL-TEST(node.STATE) then <span class="keyword">return</span> SOLUTION(node)</span><br><span class="line">    add node.STATE to explored</span><br><span class="line">    <span class="keyword">for</span> each action in problem.ACTIONS(node.STATE) do</span><br><span class="line">      child ← CHILD-NODE(problem, node, action)</span><br><span class="line">      <span class="keyword">if</span> child.STATE is not in explored or frontier then</span><br><span class="line">        frontier ← INSERT(child,frontier )</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> child.STATE is in frontier with higher PATH-COST then</span><br><span class="line">        replace that frontier node with child</span><br></pre></td></tr></table></figure>
+<p><strong>Evaluation</strong></p>
+<ul>
+<li><strong>Complete:</strong> </li>
+<li><strong>Not optimal:</strong> </li>
+<li><strong>Time complexity:</strong> </li>
+<li><strong>Space complexity:</strong> </li>
 </ul>
 
         </div>
@@ -213,7 +250,7 @@
 
 
 
-    <a data-url="https://zequnsong.github.io/2019/04/28/Introduction-to-AI/" data-id="cjv7occlp0000lcdza523cavb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zequnsong.github.io/2019/05/03/Uninformed-Search/" data-id="cjv7occlx0005lcdzq7ufz2cj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -283,20 +320,17 @@
             "@type": "Person",
             "name": "Zequn Song"
         },
-        "headline": "Introduction to AI",
-        "image": "https://zequnsong.github.io/2019/04/28/Introduction-to-AI/cover.png",
+        "headline": "Uninformed Search",
+        "image": "https://zequnsong.github.io/2019/05/03/Uninformed-Search/search.jpg",
         "keywords": "AI",
-        "genre": "Artificial Intelligence Introduction to AI",
-        "datePublished": "2019-04-28",
-        "dateCreated": "2019-04-28",
-        "dateModified": "2019-04-28",
-        "url": "https://zequnsong.github.io/2019/04/28/Introduction-to-AI/",
+        "genre": "Artificial Intelligence Uninformed & Informed Search",
+        "datePublished": "2019-05-03",
+        "dateCreated": "2019-05-03",
+        "dateModified": "2019-05-03",
+        "url": "https://zequnsong.github.io/2019/05/03/Uninformed-Search/",
         "description": "
-
-What is AI? 
-Nowadays, AI means designing a rational agent, which could act rationlly to choose the action that maximizes its expected utility.
-AgentAn agent is an entity that perceives and acts. A "
-        "wordCount": 159
+Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris"
+        "wordCount": 1198
     }
 </script>
 
@@ -366,20 +400,10 @@ AgentAn agent is an entity that perceives and acts. A "
         
 <nav id="article-nav">
     
-        <a href="/2019/04/28/Tree-Search/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Tree Search
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/04/28/TagPlugins-Test/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/04/28/Tree-Search/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">TagPlugins Test</p>
+        <p class="article-nav-title">Tree Search</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

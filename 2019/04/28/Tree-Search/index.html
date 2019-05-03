@@ -22,7 +22,7 @@
 <meta property="og:description" content="A problem-solving agent is one kind of goal-based agent. We already know that the characteristics of the environment dictate techniques for solving the problem. And the fast search techniques are sui">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zequnsong.github.io/2019/04/28/Tree-Search/mapOfRomania.jpg">
-<meta property="og:updated_time" content="2019-04-28T06:38:03.343Z">
+<meta property="og:updated_time" content="2019-05-03T06:54:20.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tree Search">
 <meta name="twitter:description" content="A problem-solving agent is one kind of goal-based agent. We already know that the characteristics of the environment dictate techniques for solving the problem. And the fast search techniques are sui">
@@ -219,7 +219,7 @@
 <li>Tree-Search<br>initial frontier = { Arad };<br><strong>step1: </strong>remove Arad from frontier;<br><strong>step2: </strong>current city == goal city ? return solution : do step3.;<br><strong>step3: </strong>expand current city to adjacent cities: Sibiu, Timisoara, Zerind. Add them to frontier;<br><strong>step4: </strong>if frontier is not empty, choose a city to expand according to some strategy, and do step234 recurrently;<br><strong>step5: </strong>if frontier is not empty, return false.</li>
 </ul>
 <p>In fact, all search algorithms share this basic tree structure above, they vary primarily according to how they choose which state to expand next – the so-called <strong>search strategy</strong>.</p>
-<p>We have two different search strategy, <strong>Uninformed Search</strong> and <strong>Informed Search</strong>, which will be covered in next two articles.</p>
+<p>We have two different search strategies, <strong>Uninformed Search</strong> and <strong>Informed Search</strong>, which will be covered in next two articles.</p>
 <h4 id="Evaluation-Criteria-for-Algorithms"><a href="#Evaluation-Criteria-for-Algorithms" class="headerlink" title="Evaluation Criteria for Algorithms"></a>Evaluation Criteria for Algorithms</h4><p>Before we get into the design of specific search strategies, we need to consider the criteria that might be used to choose among them. We can evaluate an algorithm’s performance in<br>four ways:</p>
 <ul>
 <li><strong>Completeness:</strong> Is the algorithm guaranteed to find a solution when there is one?</li>
@@ -229,9 +229,9 @@
 </ul>
 <p>In AI, complexity is expressed in terms of three quantities: </p>
 <ul>
-<li><strong>b:</strong> the branching factor or maximum number of successors of any node; </li>
-<li><strong>d:</strong> the depth of the shallowest goal node (i.e., the number of steps along the path from the root);</li>
-<li><strong>m:</strong> the maximum length of any path in the state space. </li>
+<li><strong> $b$:</strong> the branching factor or maximum number of successors of any node; </li>
+<li><strong> $d$:</strong> the depth of the shallowest goal node (i.e., the number of steps along the path from the root);</li>
+<li><strong> $m$:</strong> the maximum length of any path in the state space. </li>
 </ul>
 <p>Time is often measured in terms of the number of nodes generated during the search.<br>Space in terms of the maximum number of nodes stored in memory.</p>
 <h6 id="Source-of-pictures-for-this-article"><a href="#Source-of-pictures-for-this-article" class="headerlink" title="Source of pictures for this article:"></a>Source of pictures for this article:</h6><p>Russell and Norvig (2010). Artificial Intelligence: A Modern Approach.</p>
@@ -242,7 +242,7 @@
 
 
 
-    <a data-url="https://zequnsong.github.io/2019/04/28/Tree-Search/" data-id="cjv0kbkuk0005ksdzjj69lt3u" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zequnsong.github.io/2019/04/28/Tree-Search/" data-id="cjv7occlu0002lcdz2gxhvy4t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -318,11 +318,11 @@
         "genre": "Artificial Intelligence Uninformed & Informed Search",
         "datePublished": "2019-04-28",
         "dateCreated": "2019-04-28",
-        "dateModified": "2019-04-28",
+        "dateModified": "2019-05-03",
         "url": "https://zequnsong.github.io/2019/04/28/Tree-Search/",
         "description": "
 A problem-solving agent is one kind of goal-based agent. We already know that the characteristics of the environment dictate techniques for solving the problem. And the fast search techniques are sui"
-        "wordCount": 955
+        "wordCount": 958
     }
 </script>
 
@@ -392,6 +392,16 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
         
 <nav id="article-nav">
     
+        <a href="/2019/05/03/Uninformed-Search/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Uninformed Search
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/04/28/Introduction-to-AI/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -413,6 +423,26 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/05/03/Uninformed-Search/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/05/03/Uninformed-Search/search.jpg)" alt="Uninformed Search" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a></p>
+                            <p class="item-title"><a href="/2019/05/03/Uninformed-Search/" class="title">Uninformed Search</a></p>
+                            <p class="item-date"><time datetime="2019-05-03T06:05:11.000Z" itemprop="datePublished">2019-05-03</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -483,7 +513,7 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -493,7 +523,7 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -503,7 +533,7 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/">AI</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/">AI</a><span class="tag-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -645,6 +675,11 @@ A problem-solving agent is one kind of goal-based agent. We already know that th
     
         <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     
 
 
