@@ -22,7 +22,7 @@
 <meta property="og:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zequnsong.github.io/2019/05/03/Uninformed-Search/search.jpg">
-<meta property="og:updated_time" content="2019-05-03T08:34:04.366Z">
+<meta property="og:updated_time" content="2019-05-04T05:43:59.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Uninformed Search">
 <meta name="twitter:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
@@ -182,7 +182,7 @@
         
         <div class="article-entry" itemprop="articleBody">
             <hr>
-<p>Uninformed Search means agent doesn’t know how close a state is to the goal state.<br>Strategies that know whether one non-goal state is “more promising” than another are called <strong>Informed Search</strong> or <strong>Heuristic Search</strong> strategies; they are covered in next article.</p>
+<p>Uninformed Search means agent doesn’t know how close a state is to the goal state.<br>Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuristic Search strategies; they are covered in next article.</p>
 <img src="/2019/05/03/Uninformed-Search/search.jpg" title="BFS">
 <h4 id="Breadth-First-Search"><a href="#Breadth-First-Search" class="headerlink" title="Breadth-First Search"></a>Breadth-First Search</h4><p>The root node is expanded first, then all the successors of the root node are expanded next, then their successors, and so on. In general, all the nodes are expanded at a given depth in the search tree before any nodes at the next level are expanded.</p>
 <p><img src="BFS.jpg" alt="BFS on a simple binary tree"></p>
@@ -190,8 +190,8 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//-----------------------BREADTH-FIRST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BREADTH</span>-<span class="title">FIRST</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  node with STATE = problem.INITIAL-STATE, PATH-COST = <span class="number">0</span></span><br><span class="line">  <span class="keyword">if</span> problem.GOAL-TEST(node.STATE) then <span class="keyword">return</span> SOLUTION(node)</span><br><span class="line">  frontier = a FIFO queue with node as the only element</span><br><span class="line">  explored = an empty set</span><br><span class="line">  loop do</span><br><span class="line">    <span class="keyword">if</span> EMPTY?(frontier ) then <span class="keyword">return</span> failure</span><br><span class="line">    node = POP(frontier ) /* chooses the shallowest node in frontier */</span><br><span class="line">    add node.STATE to explored</span><br><span class="line">    <span class="keyword">for</span> each action in problem.ACTIONS(node.STATE) do</span><br><span class="line">      child = CHILD-NODE(problem, node, action)</span><br><span class="line">      <span class="keyword">if</span> child.STATE is not in explored or frontier then</span><br><span class="line">        //goal test is applied to each node when it is generated rather than when it is selected for expansion</span><br><span class="line">        <span class="keyword">if</span> problem.GOAL-TEST(child.STATE) then <span class="keyword">return</span> SOLUTION(child)</span><br><span class="line">        frontier = INSERT(child,frontier )</span><br></pre></td></tr></table></figure>
 <p><strong>Evaluation</strong></p>
 <ul>
-<li><strong>Complete:</strong> if the shallowest goal node is at some finite depth d, breadth-first search will eventually find it after generating all shallower nodes (provided the branching factor b is finite).</li>
-<li><strong>Not optimal:</strong> only optimal when the path cost is a non-decreasing function of the depth of the node. The most common such scenario is that all actions have the same cost.</li>
+<li><strong>Complete:</strong><br>If the shallowest goal node is at some finite depth d, breadth-first search will eventually find it after generating all shallower nodes (provided the branching factor b is finite).</li>
+<li><strong>Not optimal:</strong><br>Only optimal when the path cost is a non-decreasing function of the depth of the node. The most common such scenario is that all actions have the same cost.</li>
 <li><strong>Time complexity:</strong><br>Imagine branching factor is $b$ (each state has $b$ successors).<br>The root generates $b$ nodes at the first level.<br>Each of these generates $b$ more nodes, for a total of $b^2$ at the second level.<br>Each of these generates $b$ more nodes, yielding $b^3$ nodes at the third level, and so on.<br>Suppose that the solution is at depth $s$.<br>$$b + b^2 + b^3 + ··· + b^s = O(b^s)$$</li>
 </ul>
 <img src="/2019/05/03/Uninformed-Search/BFS2.jpg" title="BFS">
@@ -205,8 +205,8 @@
 <p>Frontier: a LIFO queue</p>
 <p><strong>Evaluation</strong></p>
 <ul>
-<li><strong>Complete:</strong> in finity state space.</li>
-<li><strong>Not optimal:</strong> return the leftmost solution.</li>
+<li><strong>Complete:</strong><br>In finity state space.</li>
+<li><strong>Not optimal:</strong><br>Return the leftmost solution.</li>
 <li><strong>Time complexity:</strong><br>Imagine branching factor is $b$.<br>Suppose that maximum depth is $m$.<br>Therefore, time complexity is $O(b^m)$, bigger than BFS.</li>
 </ul>
 <img src="/2019/05/03/Uninformed-Search/DFS2.jpg" title="DFS">
@@ -225,24 +225,39 @@
 </ul>
 <h4 id="Iterative-Deepening-Search"><a href="#Iterative-Deepening-Search" class="headerlink" title="Iterative Deepening Search"></a>Iterative Deepening Search</h4><p>Get DFS’s space advantage with BFS’s time advantage. Repeat the DFS by gradually increasing the depth limit, until a goal is found.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//-----------------------BREADTH-FIRST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ITERATIVE</span>-<span class="title">DEEPENING</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  <span class="keyword">for</span> depth = <span class="number">0</span> to ∞ do</span><br><span class="line">    result ← DEPTH-LIMITED-SEARCH(problem, depth)</span><br><span class="line">    <span class="keyword">if</span> result != cutoff then <span class="keyword">return</span> result </span><br><span class="line">    //the cutoff value indicates no solution within the depth limit.</span><br></pre></td></tr></table></figure>
+<p>Limit 0 is root node.<br>Run a DFS with depth limit 1. If no solution…<br>Run a DFS with depth limit 2. If no solution…<br>Run a DFS with depth limit 3. …</p>
 <p><img src="IDS.jpg" alt="Four iterations of IDS on a binary tree."></p>
 <p><strong>Evaluation</strong></p>
 <ul>
 <li><strong>Complete:</strong> same as BFS</li>
 <li><strong>Not optimal:</strong> same as BFS</li>
-<li><strong>Time complexity:</strong> $O(b^s)$<br>asymptotically the same as BFS<br>There is some extra cost for generating the upper levels multiple times, but it is not large.<br>For example, if $b = 10$ and $s = 5$, the numbers are<br>$N(IDS) = 50 + 400 + 3, 000 + 20, 000 + 100, 000 = 123, 450$<br>$N(BFS) = 10 + 100 + 1, 000 + 10, 000 + 100, 000 = 111, 110$</li>
+<li><strong>Time complexity:</strong> $O(b^s)$<br>asymptotically the same as BFS<br>There is some extra cost for generating the upper levels multiple times, but it is not large.<br>For example, if $b = 10$ and $s = 5$, the numbers are<br>$N(IDS) = 50 + 400 + 3000 + 20000 + 100000 = 123450$<br>$N(BFS) = 10 + 100 + 1000 + 10000 + 100000 = 111110$</li>
 <li><strong>Space complexity:</strong> $O(bs)$</li>
 </ul>
-<h4 id="Uniform-Cost-Search"><a href="#Uniform-Cost-Search" class="headerlink" title="Uniform Cost Search"></a>Uniform Cost Search</h4><p>When all step costs are equal, breadth-first search is optimal because it always expands the shallowest unexpanded node.<br>By a simple extension, we can find an algorithm that is optimal with any step-cost function.<br>Instead of expanding the shallowest node, UCS expands the node n with the lowest g(n) which is path cost.<br>This is done by storing the frontier as a priority queue ordered by g.</p>
-<p>Frontier: a priority queue (priority: cumulative cost g(n))</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//----------------------- UNIFORM-COST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UNIFORM</span>-<span class="title">COST</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  node ←a node with STATE = problem.INITIAL-STATE, PATH-COST = <span class="number">0</span></span><br><span class="line">  frontier ← a priority queue ordered by PATH-COST, with node as the only element</span><br><span class="line">  explored ← an empty set</span><br><span class="line">  loop do</span><br><span class="line">    <span class="keyword">if</span> EMPTY?(frontier ) then <span class="keyword">return</span> failure</span><br><span class="line">    node ← POP(frontier ) /* chooses the lowest-cost node in frontier */</span><br><span class="line">    <span class="keyword">if</span> problem.GOAL-TEST(node.STATE) then <span class="keyword">return</span> SOLUTION(node)</span><br><span class="line">    add node.STATE to explored</span><br><span class="line">    <span class="keyword">for</span> each action in problem.ACTIONS(node.STATE) do</span><br><span class="line">      child ← CHILD-NODE(problem, node, action)</span><br><span class="line">      <span class="keyword">if</span> child.STATE is not in explored or frontier then</span><br><span class="line">        frontier ← INSERT(child,frontier )</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> child.STATE is in frontier with higher PATH-COST then</span><br><span class="line">        replace that frontier node with child</span><br></pre></td></tr></table></figure>
-<p><strong>Evaluation</strong></p>
+<h4 id="Uniform-Cost-Search"><a href="#Uniform-Cost-Search" class="headerlink" title="Uniform Cost Search"></a>Uniform Cost Search</h4><p>BFS is only optima with non-decreasing cost function.<br>But UCS can find the least-cost(optimal) path with any step-cost function.<br>Instead of expanding the shallowest node, UCS expands the node n with the lowest $g(n)$ (which is path cost).</p>
+<p>There are two other significant differences from breadth-first search. </p>
 <ul>
-<li><strong>Complete:</strong> </li>
-<li><strong>Not optimal:</strong> </li>
-<li><strong>Time complexity:</strong> </li>
-<li><strong>Space complexity:</strong> </li>
+<li>The first is that the goal test is applied to a node when it is selected for expansion rather than when it is first generated. The reason is that the first goal node that is generated may be on a suboptimal path. </li>
+<li>The second difference is that a test is added in the end in case a better path is found to a node currently on the frontier</li>
 </ul>
+<p>Frontier: a priority queue (ordered by cumulative cost g(n))</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//----------------------- UNIFORM-COST-SEARCH--------------------------</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UNIFORM</span>-<span class="title">COST</span>-<span class="title">SEARCH</span><span class="params">(problem)</span> <span class="title">returns</span> <span class="title">a</span> <span class="title">solution</span>, <span class="title">or</span> <span class="title">failure</span></span></span><br><span class="line">  node with STATE = problem.INITIAL-STATE, PATH-COST = <span class="number">0</span></span><br><span class="line">  frontier = a priority queue ordered by PATH-COST, with node as the only element</span><br><span class="line">  explored = an empty set</span><br><span class="line">  loop do</span><br><span class="line">    <span class="keyword">if</span> EMPTY?(frontier ) then <span class="keyword">return</span> failure</span><br><span class="line">    node = POP(frontier ) /* chooses the lowest-cost node in frontier */</span><br><span class="line">    if problem.GOAL-TEST(node.STATE) then return SOLUTION(node) //different goaltest location</span><br><span class="line">    add node.STATE to explored</span><br><span class="line">    <span class="keyword">for</span> each action in problem.ACTIONS(node.STATE) do</span><br><span class="line">      child = CHILD-NODE(problem, node, action)</span><br><span class="line">      <span class="keyword">if</span> child.STATE is not in explored or frontier then</span><br><span class="line">        frontier ← INSERT(child,frontier )</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> child.STATE is in frontier with higher PATH-COST then</span><br><span class="line">        replace that frontier node with child</span><br></pre></td></tr></table></figure>
+<h6 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h6><p><img src="UCS2.jpg" alt="Part of the Romania state space"></p>
+<p>The goal is to get from Sibiu to Bucharest.<br>Frontier={ Sibiu-0 }</p>
+<p>The successors of Sibiu are Rimnicu Vilcea and Fagaras, with costs 80 and 99, respectively.<br>Frontier={ Rimnicu Vilcea-80, Fagaras-99 }</p>
+<p>The least-cost node, Rimnicu Vilcea, is expanded.adding Pitesti with cost 80 + 97 = 177.<br>Frontier={ Fagaras-99, Pitesti-177 }</p>
+<p>The least-cost node is now Fagaras, so it is expanded, adding Bucharest with cost 99 + 211 = 310.<br>Frontier={ Pitesti-177, Bucharest-310 }</p>
+<p>Now a goal node has been generated, but UCS keeps going, no goal test now.<br>Choosing Pitesti for expansion and adding a second path to Bucharest with cost 80+ 97+ 101 = 278.<br>Frontier={ Bucharest(2)-278, Bucharest(1)-310 }</p>
+<p>Choosing Bucharest(2), goal test now, the node to expand is goal state Bucharest with g-cost 278, the solution is returned.</p>
+<p><strong>Evaluation</strong><br>UCS is guided by path costs rather than depths, so its complexity is not easily characterized in terms of $b$ and $d$.<br>Define some new variables:<br>$C^*$ is the cost for the optimal plan that reach the goal.<br>$\epsilon$ is the minimum cost for each action<br>Therefore, we will go at most $C^*/\epsilon$ deep.</p>
+<p><img src="UCS.jpg" alt="UCS"></p>
+<ul>
+<li><strong>Complete:</strong><br>As long as there is a lower bound of the cost of each action ($\epsilon$ exist and $\epsilon&gt;0$)<br>UCS is a generalization of Breadth First Search in the sense that it takes costs of each edge into account. </li>
+<li><strong>Optimal:</strong><br>Whenever UCS selects a node n for expansion, the optimal path to that node has been found, because our expand strategy is expands the node with the lowest path cost g(n)<br>Then, because step costs are non-negative, paths never get shorter as nodes are added.<br>These two facts together imply that UCS expands nodes in order of their optimal path cost.<br>Hence, the first goal node selected for expansion must be the optimal solution.</li>
+<li><strong>Time complexity:</strong> $O(b^{C^*/\epsilon})$<br>Longer than BFS. BFS stops as soon as it generates a goal, whereas UCS examines all the nodes at the goal’s depth to see if one has a lower cost; thus UCS does strictly more work by expanding nodes at depth d unnecessarily.</li>
+<li><strong>Space complexity:</strong> $O(b^{C^*/\epsilon})$  roughly the last tier</li>
+</ul>
+<p>Conceptually, all the search algorithms above are the same except for frontier strategies, and all frontier are priority queues (priority means strategy).</p>
 
         </div>
         <footer class="article-footer">
@@ -326,11 +341,11 @@
         "genre": "Artificial Intelligence Uninformed & Informed Search",
         "datePublished": "2019-05-03",
         "dateCreated": "2019-05-03",
-        "dateModified": "2019-05-03",
+        "dateModified": "2019-05-04",
         "url": "https://zequnsong.github.io/2019/05/03/Uninformed-Search/",
         "description": "
 Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris"
-        "wordCount": 1198
+        "wordCount": 1616
     }
 </script>
 
