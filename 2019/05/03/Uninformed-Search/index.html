@@ -22,7 +22,7 @@
 <meta property="og:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zequnsong.github.io/2019/05/03/Uninformed-Search/search.jpg">
-<meta property="og:updated_time" content="2019-05-04T05:43:59.017Z">
+<meta property="og:updated_time" content="2019-05-04T08:07:09.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Uninformed Search">
 <meta name="twitter:description" content="Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris">
@@ -204,10 +204,11 @@
 <p><img src="DFS.jpg" alt="DFS. The unexplored region is shown in light gray. Explored nodes with no descendants in the frontier are removed from memory. M is the only goal node."></p>
 <p>Frontier: a LIFO queue</p>
 <p><strong>Evaluation</strong></p>
+<p>The properties of DFS strongly on whether the graph-search or tree-search version is used</p>
 <ul>
-<li><strong>Complete:</strong><br>In finity state space.</li>
+<li><strong>Complete:</strong><br>Complete by graph-search if finite state space.<br>Not Complete by treee-search, maybe follow the loop forever.</li>
 <li><strong>Not optimal:</strong><br>Return the leftmost solution.</li>
-<li><strong>Time complexity:</strong><br>Imagine branching factor is $b$.<br>Suppose that maximum depth is $m$.<br>Therefore, time complexity is $O(b^m)$, bigger than BFS.</li>
+<li><strong>Time complexity:</strong><br>Imagine branching factor is $b$.<br>Suppose that maximum depth is $m$.<br>Therefore, time complexity is $O(b^m)$, bigger than BFS.<br>In tree search version, $m$ may be much larger than $d$ (the depth of shallowest solution).</li>
 </ul>
 <img src="/2019/05/03/Uninformed-Search/DFS2.jpg" title="DFS">
 <center><font color="#afaaaa" size="4">DFS</font></center>
@@ -265,7 +266,7 @@
 
 
 
-    <a data-url="https://zequnsong.github.io/2019/05/03/Uninformed-Search/" data-id="cjv7occlx0005lcdzq7ufz2cj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zequnsong.github.io/2019/05/03/Uninformed-Search/" data-id="cjv975k1h000k2gdzgmmbi5v0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -345,7 +346,7 @@
         "url": "https://zequnsong.github.io/2019/05/03/Uninformed-Search/",
         "description": "
 Uninformed Search means agent doesn’t know how close a state is to the goal state.Strategies that know whether one non-goal state is “more promising” than another are called Informed Search or Heuris"
-        "wordCount": 1616
+        "wordCount": 1655
     }
 </script>
 
