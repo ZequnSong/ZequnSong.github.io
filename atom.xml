@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zequnsong.github.io/"/>
-  <updated>2020-10-22T09:41:51.776Z</updated>
+  <updated>2020-10-22T10:08:01.987Z</updated>
   <id>https://zequnsong.github.io/</id>
   
   <author>
@@ -17,34 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://zequnsong.github.io/2020/10/22/hexoproj/"/>
-    <id>https://zequnsong.github.io/2020/10/22/hexoproj/</id>
-    <published>2020-10-22T09:36:07.344Z</published>
-    <updated>2020-10-22T09:41:51.776Z</updated>
-    
-    <content type="html"><![CDATA[{"Host":"127.0.0.1","Port":4000,"User":"username","Password":"password","HexoRoot":"/d/Hexo/blog"}]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        {&quot;Host&quot;:&quot;127.0.0.1&quot;,&quot;Port&quot;:4000,&quot;User&quot;:&quot;username&quot;,&quot;Password&quot;:&quot;password&quot;,&quot;HexoRoot&quot;:&quot;/d/Hexo/blog&quot;}
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Binary Search</title>
     <link href="https://zequnsong.github.io/2020/10/21/Binary-Search/"/>
     <id>https://zequnsong.github.io/2020/10/21/Binary-Search/</id>
     <published>2020-10-22T05:26:34.000Z</published>
-    <updated>2020-10-22T10:03:49.564Z</updated>
+    <updated>2020-10-22T10:08:01.987Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>二分法</p><p><div align="center"><img src="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg" width="50%" height="50%"></div></p><p><img src="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg" alt></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>二分法</p><p><img src="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg" alt></p>]]></content>
     
     <summary type="html">
     
@@ -52,7 +31,8 @@
       
         &lt;hr&gt;
 &lt;p&gt;二分法&lt;/p&gt;
-&lt;p&gt;&lt;div align=&quot;center&quot;&gt;&lt;img src=&quot;https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg&quot; width=&quot;50%&quot; heig
+&lt;p&gt;&lt;img src=&quot;https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg&quot; alt&gt;&lt;/p&gt;
+
       
     
     </summary>
