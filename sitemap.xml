@@ -2,37 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zequnsong.github.io/2019/05/03/Uninformed-Search/</loc>
+    <loc>https://zequnsong.github.io/2020/10/21/Binary-Search/</loc>
     
-    <lastmod>2019-05-04T08:07:09.588Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zequnsong.github.io/2019/04/28/Tree-Search/</loc>
-    
-    <lastmod>2019-05-04T07:53:25.462Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zequnsong.github.io/2019/04/28/TagPlugins-Test/</loc>
-    
-    <lastmod>2019-04-28T06:24:53.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zequnsong.github.io/2019/04/28/Introduction-to-AI/</loc>
-    
-    <lastmod>2019-04-28T06:12:16.317Z</lastmod>
+    <lastmod>2020-10-22T08:35:24.960Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://zequnsong.github.io/about/index.html</loc>
     
-    <lastmod>2019-04-28T05:38:46.363Z</lastmod>
+    <lastmod>2020-10-22T08:14:00.859Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zequnsong.github.io/2019/05/02/Uninformed-Search/</loc>
+    
+    <lastmod>2019-05-04T08:07:09.588Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zequnsong.github.io/2019/04/27/Tree-Search/</loc>
+    
+    <lastmod>2019-05-04T07:53:25.462Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zequnsong.github.io/2019/04/27/TagPlugins-Test/</loc>
+    
+    <lastmod>2019-04-28T06:24:53.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zequnsong.github.io/2019/04/27/Introduction-to-AI/</loc>
+    
+    <lastmod>2019-04-28T06:12:16.317Z</lastmod>
     
   </url>
   
