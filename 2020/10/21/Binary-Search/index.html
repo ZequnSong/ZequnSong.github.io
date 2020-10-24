@@ -13,20 +13,20 @@
     
         <meta name="keywords" content="Binary Search,二分法">
     
-    <meta name="description" content="二分法">
+    <meta name="description" content="Coding时的主要问题 循环结束条件到底如何选 left &amp;lt;= right;  left &amp;lt; right;  left + 1 &amp;lt; right;    指针变化 left或right = mid;  left或right = mid + 1;  left或right = mid - 1;     如果不能妥善处理上述问题，就很容易导致死循环 通用的二分法模板为了解决上述问题">
 <meta name="keywords" content="Binary Search,二分法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Binary Search">
 <meta property="og:url" content="https://zequnsong.github.io/2020/10/21/Binary-Search/index.html">
 <meta property="og:site_name" content="Zequn&#39;s Blog">
-<meta property="og:description" content="二分法">
+<meta property="og:description" content="Coding时的主要问题 循环结束条件到底如何选 left &amp;lt;= right;  left &amp;lt; right;  left + 1 &amp;lt; right;    指针变化 left或right = mid;  left或right = mid + 1;  left或right = mid - 1;     如果不能妥善处理上述问题，就很容易导致死循环 通用的二分法模板为了解决上述问题">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg">
-<meta property="og:updated_time" content="2020-10-22T10:08:01.987Z">
+<meta property="og:image" content="https://zequnsong.github.io/2020/10/21/Binary-Search/binary-search-cover.jpg">
+<meta property="og:updated_time" content="2020-10-24T10:05:15.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Binary Search">
-<meta name="twitter:description" content="二分法">
-<meta name="twitter:image" content="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg">
+<meta name="twitter:description" content="Coding时的主要问题 循环结束条件到底如何选 left &amp;lt;= right;  left &amp;lt; right;  left + 1 &amp;lt; right;    指针变化 left或right = mid;  left或right = mid + 1;  left或right = mid - 1;     如果不能妥善处理上述问题，就很容易导致死循环 通用的二分法模板为了解决上述问题">
+<meta name="twitter:image" content="https://zequnsong.github.io/2020/10/21/Binary-Search/binary-search-cover.jpg">
     
 
     
@@ -82,7 +82,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/Binary-Search/">Binary Search</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -141,7 +141,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a>
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Algorithm/Binary-Search/">Binary Search</a>
     </h1>
 </div>
 
@@ -182,8 +182,70 @@
         
         <div class="article-entry" itemprop="articleBody">
             <hr>
-<p>二分法</p>
-<p><img src="https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg" alt></p>
+<img src="/2020/10/21/Binary-Search/binary-search-cover.jpg" title="二分法">
+<h4 id="Coding时的主要问题"><a href="#Coding时的主要问题" class="headerlink" title="Coding时的主要问题"></a>Coding时的主要问题</h4><ul>
+<li>循环结束条件到底如何选<ul>
+<li><code>left &lt;= right;</code> </li>
+<li><code>left &lt; right;</code> </li>
+<li><code>left + 1 &lt; right;</code> </li>
+</ul>
+</li>
+<li>指针变化<ul>
+<li><code>left或right = mid;</code> </li>
+<li><code>left或right = mid + 1;</code> </li>
+<li><code>left或right = mid - 1;</code> </li>
+</ul>
+</li>
+</ul>
+<p>如果不能妥善处理上述问题，就很容易导致死循环</p>
+<h4 id="通用的二分法模板"><a href="#通用的二分法模板" class="headerlink" title="通用的二分法模板"></a>通用的二分法模板</h4><p>为了解决上述问题，可采用如下二分法模板</p>
+<ul>
+<li>循环结束条件：永远是 <code>left + 1 &lt; right;</code> 也就是说当left和right指针相邻时则循环结束退出</li>
+<li>指针变化：永远是 <code>left或right = mid;</code> </li>
+<li>永远采取下中位数 <code>mid = left + (right - left)/2</code> 同时避免越界访问</li>
+<li>永远分三段式判断来移动指针：<code>array[mid] ==/&lt;/&gt; taret？</code> </li>
+<li>循环结束后永远double check：<code>array[left] == target? array[right] == target?</code> </li>
+</ul>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>给定有序数组和target，寻找target在数组中第一次出现的位置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] searchRange(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//相邻则退出</span></span><br><span class="line">        <span class="keyword">while</span>(left + <span class="number">1</span> &lt; right)&#123;</span><br><span class="line">            <span class="comment">//下中位数，同时注意形式防止溢出</span></span><br><span class="line">            <span class="keyword">int</span> mid = left + (right - left)/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//三段式判断</span></span><br><span class="line">            <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">                left = mid;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">                right = mid;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &gt; target)</span><br><span class="line">                right = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//double check</span></span><br><span class="line">        <span class="keyword">if</span>(nums[left] == target) <span class="keyword">return</span> left;</span><br><span class="line">        <span class="keyword">if</span>(nums[right] == target) <span class="keyword">return</span> right;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="解题三种思路"><a href="#解题三种思路" class="headerlink" title="解题三种思路"></a>解题三种思路</h4><ul>
+<li>OOO<font color="#FF0000"><strong>O</strong></font><font color="#0099ff"><strong>X</strong></font>XXX  –&gt; 常见于有序数组中的search，找到满足某个条件的值第一个位置或最后一个位置</li>
+<li>Half Half –&gt; 给定数组通常乱序或不是传统有序，无法找到一个条件形成上述模型，则可根据判断，保留有解的一半，去掉无解的一半</li>
+<li>Result –&gt; 当题目没有给出数组或者很难看出可用二分法时，可尝试对目标值进行二分，同样是找到满足某个条件的最大最小值。此类问题一般会有别的方法，但是如果用二分显然会更简单。</li>
+</ul>
+<h4 id="常见题型"><a href="#常见题型" class="headerlink" title="常见题型"></a>常见题型</h4><ul>
+<li><p>OOO<font color="#FF0000"><strong>O</strong></font><font color="#0099ff"><strong>X</strong></font>XXX</p>
+<ul>
+<li><p>给定有序数组和target，寻找target在数组中第<strong>first/last</strong>次出现的位置，此时条件为first/last出现的值与target的关系。</p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Leetcode/034FindFirstandLastPositionofElementinSortedArray.md" target="_blank" rel="noopener">Leetcode034. FindFirstandLastPositionofElementinSortedArray</a>
+<p><br></p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Leetcode/278.%20First%20Bad%20Version.md" target="_blank" rel="noopener">Leetcode278. First Bad Version</a>
+<p><br></p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Leetcode/702.%20Search%20in%20a%20Sorted%20Array%20of%20Unknown%20Size.md" target="_blank" rel="noopener">Leetcode702. Search in a Sorted Array of Unknown Size</a>
+</li>
+</ul>
+</li>
+<li><p>Half Half</p>
+<ul>
+<li><p>给定数组通常乱序或不是传统有序。</p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Lintcode/075.%20Find%20Peak%20Element.md" target="_blank" rel="noopener">Lintcode075. Find Peak Element</a>
+<p><br></p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Leetcode/033SearchinRotatedSortedArray.md" target="_blank" rel="noopener">Leetcode033. SearchinRotatedSortedArray</a>
+</li>
+</ul>
+</li>
+<li><p>Binary Search on Result</p>
+<ul>
+<li><p>此类问题一般步骤：明确对结果二分，先确定left和right的边界， 再套用模板</p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Leetcode/069Sqrt(x).md" target="_blank" rel="noopener">Leetcode069. Sqrt(x)</a>
+<p><br></p>
+<a href="https://github.com/ZequnSong/Leetcode/blob/master/Lintcode/183.%20Wood%20Cut.md" target="_blank" rel="noopener">Lintcode183. Wood Cut</a>
+<p><br></p>
+<p><a href="https://www.lintcode.com/problem/copy-books/description" target="_blank" rel="noopener">https://www.lintcode.com/problem/copy-books/description</a></p>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -191,7 +253,7 @@
 
 
 
-    <a data-url="https://zequnsong.github.io/2020/10/21/Binary-Search/" data-id="ckgkkmes80006f4dzil9j46wg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zequnsong.github.io/2020/10/21/Binary-Search/" data-id="ckgm3pkaf0006kwdz76ol0tns" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -262,18 +324,32 @@
             "name": "Zequn Song"
         },
         "headline": "Binary Search",
-        "image": "https://zequnsong.github.iohttps://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg",
+        "image": "https://zequnsong.github.io/2020/10/21/Binary-Search/binary-search-cover.jpg",
         "keywords": "Binary Search 二分法",
-        "genre": "Algorithm",
+        "genre": "Algorithm Binary Search",
         "datePublished": "2020-10-22",
         "dateCreated": "2020-10-22",
-        "dateModified": "2020-10-22",
+        "dateModified": "2020-10-24",
         "url": "https://zequnsong.github.io/2020/10/21/Binary-Search/",
         "description": "
-二分法
 
-"
-        "wordCount": 3
+Coding时的主要问题
+循环结束条件到底如何选
+left &lt;= right; 
+left &lt; right; 
+left + 1 &lt; right; 
+
+
+指针变化
+left或right = mid; 
+left或right = mid + 1; 
+left或right = mid - 1; 
+
+
+
+如果不能妥善处理上述问题，就很容易导致死循环
+通用的二分法模板为了解决上述问题"
+        "wordCount": 475
     }
 </script>
 
@@ -371,7 +447,7 @@
                             <a href="/2020/10/21/Binary-Search/" class="thumbnail">
     
     
-        <span style="background-image:url(https://www.gadgetronicx.com/wp-content/uploads/2020/06/binary-search.jpg)" alt="Binary Search" class="thumbnail-image"></span>
+        <span style="background-image:url(/2020/10/21/Binary-Search/binary-search-cover.jpg)" alt="Binary Search" class="thumbnail-image"></span>
     
     
 </a>
@@ -379,7 +455,7 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Binary-Search/">Binary Search</a></p>
                             <p class="item-title"><a href="/2020/10/21/Binary-Search/" class="title">Binary Search</a></p>
                             <p class="item-date"><time datetime="2020-10-22T05:26:34.000Z" itemprop="datePublished">2020-10-22</time></p>
                         </div>
@@ -474,7 +550,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/Binary-Search/">Binary Search</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/">Artificial Intelligence</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Introduction-to-AI/">Introduction to AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Artificial-Intelligence/Uninformed-Informed-Search/">Uninformed & Informed Search</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/Tag-Plugins/">Tag Plugins</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
